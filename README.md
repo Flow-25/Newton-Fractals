@@ -51,10 +51,10 @@ This generates an 800×800 Newton Fractal for `z^5 - 1 = 0` with 50 max iteratio
 * The program writes the image in **PPM (P6)** format, which can be viewed with most image viewers (e.g., `eog`, `display`, or `GIMP`).
 * Parallel computation is implemented in `image_generate.ispc`.
 
+### Newton Fractal n = 3
 ![Newton Fractal n = 3](images/frac3.png)
-Newton Fractal n = 3
+### Newton Fractal n = 7 
 ![Newton Fractal n = 7](images/frac7.png)
-Newton Fractal n = 7
+### Newton Fractal n = 32
 ![Newton Fractal n = 32](images/frac32.png)
 
-Newton Fractal n = 32
