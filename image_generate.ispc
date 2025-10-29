@@ -106,11 +106,9 @@ inline color_rgb evaluate_color(double x, double y, int n, int max_iterations){
 
         int color_id = check_roots(zn, n);
         if (color_id != -1){
-            //assumption that n < 64 why need more when its indistingushable for human eye
             double intensity = max(1.0 / sqrt((float) i), 1.0 / 10.0);
             color_rgb c = sample_color(color_id + 1, n, intensity); 
             return c;
-            //color evaluation based on iterations and root convergance
         }
     }
     color_rgb c = {0,0,0};
@@ -125,6 +123,8 @@ export void fill_image(uniform int8 r[], uniform int8 g[], uniform int8 b[], uni
         foreach (i = 0 ... width) {
             double x = ((double) i) / ((double) center_x) - 1.0;
             double y = ((double) j) / ((double) center_y) - 1.0;
+            x *= 2.0;
+            y *= 2.0;
             color_rgb color = evaluate_color(x, y, n, max_iterations);
             int px = i + j * width;
             r[px] = color.r;

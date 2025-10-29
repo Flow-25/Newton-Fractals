@@ -7,15 +7,15 @@
 extern "C" void fill_image(unsigned char *r, unsigned char *g, unsigned char *b, int width, int height, int iterations, int n);
 
 int main(int argc, char **argv) {
-    if (argc < 6) {
-        std::cerr << "Usage: " << argv[0] << " <degree> <width> <height> <max_iterations> <out.ppm>\n";
+    if (argc != 5) {
+        std::cerr << "Usage: " << argv[0] << " <degree> <width = hight> <max_iterations> <out.ppm>\n";
         return 1;
     }
     int n = std::atoi(argv[1]);
     int width  = std::atoi(argv[2]);
-    int height = std::atoi(argv[3]);
-    int iterations = std::atoi(argv[4]);
-    const char *out = argv[5];
+    int height = std::atoi(argv[2]);
+    int iterations = std::atoi(argv[3]);
+    const char *out = argv[4];
 
     std::vector<unsigned char> pixels((size_t)width * height * 3);
   
