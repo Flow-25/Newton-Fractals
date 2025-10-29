@@ -65,11 +65,11 @@ This generates a 1000×1000 Newton Fractal for `z^5 - 1 = 0`, performing up to 5
 
 ## Example Renders
 
-### Newton Fractal n = 3 (500 iterations)
+### Newton Fractal n = 3 (2000 iterations)
 
 ![Newton Fractal n = 3](images/frac3.png)
 
-### Newton Fractal n = 7 (500 iterations)
+### Newton Fractal n = 7 (2000 iterations)
 
 ![Newton Fractal n = 7](images/frac7.png)
 
